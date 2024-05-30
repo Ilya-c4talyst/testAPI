@@ -80,3 +80,8 @@ pip install -r requirements.txt
 CMD ["uvicorn", "main:app", "--host", "127.0.0.0", "--port", "8000"]
 ```
 
+## Разработчик
+
+- Савченко Илья
+- c4talyst12@yandex.ru
+- @m1rac77e
