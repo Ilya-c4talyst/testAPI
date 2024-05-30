@@ -9,7 +9,7 @@ client = TestClient(app)
 
 def test_get_deposite_success():
     response = client.post(
-        "/task",
+        "/",
         json={
             "date": "31.01.2021",
             "periods": 6,
@@ -81,7 +81,7 @@ class TestValidErrors:
     )
     def test_valid(self, data, res):
         response = client.post(
-            "/task",
+            "/",
             json=data,
         )
         assert response.status_code == 400

@@ -18,7 +18,6 @@ def validation_exception_handler(
     """Перехватчик исключений, формирует код 400 и сообщение об ошибке."""
 
     errors = [err["loc"][1] + err["msg"][5:] for err in exc.errors()]
-    print(exc.errors())
 
     return JSONResponse(
         status_code=400,
@@ -26,7 +25,7 @@ def validation_exception_handler(
     )
 
 
-@app.post('/task')
+@app.post('/')
 def get_deposite(task: Task) -> JSONResponse:
     """Обработка POST запроса для рассчета депозита."""
 
